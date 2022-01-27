@@ -7,8 +7,11 @@ public class Task1 {
         int[] array = {4, 6, 9, 12, 25};
         for (int i : array) {
             result += i;
+            if (i == n) {
+                result -= n;
+            }
         }
-        System.out.println("Сумма чисел массива без числа \"n\" равна " + (result - n));
+        System.out.println("Сумма чисел массива без числа \"n\" равна " + result);
     }
 }
 
