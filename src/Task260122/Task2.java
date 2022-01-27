@@ -2,7 +2,6 @@ package Task260122;
 
 public class Task2 {
     public static void main(String[] args) {
-
         int n = 15;
         int result = 0;
         int[] array = new int[n];
