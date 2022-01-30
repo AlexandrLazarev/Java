@@ -17,27 +17,18 @@ public class Task6 {
         };
         int[][] arraySum = new int[4][4];
         int[][] arrayDiff = new int[4][4];
-
+        System.out.print("Сумма двух массивов ");
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 arraySum[i][j] = array2[i][j] + array[i][j];
-            }
-        }
-        System.out.print("Сумма двух массивов ");
-        for (int i = 0; i < array2.length; i++) {
-            for (int j = 0; j < array2[i].length; j++) {
                 System.out.print(arraySum[i][j] + " ");
             }
         }
         System.out.println();
+        System.out.print("Разность двух массивов ");
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 arrayDiff[i][j] = array2[i][j] - array[i][j];
-            }
-        }
-        System.out.print("Разность двух массивов ");
-        for (int i = 0; i < array2.length; i++) {
-            for (int j = 0; j < array2[i].length; j++) {
                 System.out.print(arrayDiff[i][j] + " ");
             }
         }
