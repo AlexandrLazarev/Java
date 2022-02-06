@@ -30,6 +30,6 @@ class Average2Test {
         double s5 = average.Average2(6);
         double s6 = average.Average2(100);
         double s7 = average.Average2(100);
-        System.out.println("Средене значение последних пяти введенных чисел равго " + s7);
+        System.out.println("Средене значение последних пяти введенных чисел равно " + s7);
     }
 }
