@@ -24,17 +24,11 @@ class Average2Test {
     public static void main(String[] args) {
         Average2 average = new Average2();
         double s = average.Average2(2);
-        System.out.println(s);
         double s2 = average.Average2(3);
-        System.out.println(s2);
         double s3 = average.Average2(4);
-        System.out.println(s3);
         double s4 = average.Average2(5);
-        System.out.println(s4);
         double s5 = average.Average2(6);
-        System.out.println(s5);
         double s6 = average.Average2(100);
-        System.out.println(s6);
         double s7 = average.Average2(100);
         System.out.println(s7);
     }
