@@ -15,6 +15,7 @@ public class AccumulationAverage {
             for (int j = 1; j < array.length; j++) {
                 array[j - 1] = array[j];
             }
+            array[i-1]=0;
             i--;
         }
         return array[i];
@@ -37,6 +38,8 @@ class AccumulationAverageTest {
         double s = average.AccumulationAverage(2);
         double s2 = average.AccumulationAverage(8);
         double s3 = average.AccumulationAverage(20);
+        double s4 = average.AccumulationAverage(2);
+       
         double averageResult = average.average();
         System.out.println("Среднее арифметическое последних пяти чисел равно " + averageResult);
     }
