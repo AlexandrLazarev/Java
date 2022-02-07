@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Task7 {
     public static void main(String[] args) {
-        String str = "плор алололоа ывы";
+        String str = "Солнце, Антарктида, яблоня";
         Pattern p = Pattern.compile("\bа.[^\s]*а\b");
         Matcher m = p.matcher(str);
         while (m.find()) {
