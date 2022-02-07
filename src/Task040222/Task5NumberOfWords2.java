@@ -9,7 +9,7 @@ public class Task5NumberOfWords2 {
     public static void main(String[] args) {
 
         int num = 0;
-        String str = "Искусс ссылаться";
+        String str = "Искусство ссылаться";
         Pattern p = Pattern.compile("с[^\s]*с[^\s]*с[^\s]*");
         Matcher m = p.matcher(str);
         while (m.find()) {
