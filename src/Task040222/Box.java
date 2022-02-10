@@ -1,17 +1,16 @@
 package Task040222;
 
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Box {
-    int count = 0;
-    int x = 5;
-    int y = 5;
-    int z = 0;
+   private int count = 0;
+   private int x = 5;
+   private int y = 5;
+   private int z = 0;
 
     public Box(String name) {
-        Pattern p = Pattern.compile("\\d");
+        Pattern p = Pattern.compile("\\d*\\d");
         Matcher m = p.matcher(name);
         while (m.find()) {
             count++;
@@ -47,7 +46,7 @@ public class Box {
             System.out.println("У нас конверт с размерами " + this.x + " x " + this.y);
         }
         if (x == y && x == z) {
-            System.out.println("У нас куб  длиной ребра равной " + this.x);
+            System.out.println("У нас куб с длиной ребра равной " + this.x);
         }
         if ((x != y || x != z) && z != 0) {
             System.out.println("У нас простая коробка с размерами " + this.x + " x " + this.y + " x " + this.z);
@@ -57,7 +56,7 @@ public class Box {
 
 class BoxTest {
     public static void main(String[] args) {
-        Box box = new Box("Box [1,4,9]");
+        Box box = new Box("Box [222,222,222]");
         box.boxType(box);
     }
 }
