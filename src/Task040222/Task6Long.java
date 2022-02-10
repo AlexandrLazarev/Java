@@ -6,8 +6,8 @@ import java.util.regex.Pattern;
 public class Task6Long {
     public static void main(String[] args) {
         String max = "";
-        String str = "Регулярные выражения — тема, которую программисты, даже опытные, зачастую откладывают на потом.";
-        Pattern p = Pattern.compile("[а-яА-Яa-zA-Z0-9]*");
+        String str = "Регулярные выражения — тема, которую программисты, даже опытные, зачастую откладывают на потом. фываавфыыф-ываавыф";
+        Pattern p = Pattern.compile("[а-яА-Яa-zA-Z0-9-]*");
         Matcher m = p.matcher(str);
         while (m.find()) {
             if (m.group().length() > max.length()) {
