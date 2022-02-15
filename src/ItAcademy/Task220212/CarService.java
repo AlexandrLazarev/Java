@@ -1,6 +1,9 @@
 package ItAcademy.Task220212;
 
+public interface CarService {
 
-public class CarService {
+    void setColor();
+    void setWheelSize();
+    void setOptionList();
 
 }
