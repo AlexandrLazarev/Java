@@ -1,15 +1,19 @@
 package ItAcademy.Task220212;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Car {
     private String color;
-    private final String model;
-    private final int year;
+    private String model;
+    private int year;
     private int wheelSize;
-    private final double engineCapacity;
+    private double engineCapacity;
     ArrayList<String> optionList = new ArrayList<>();
+
+    Car() {
+
+    }
 
     Car(String color, String model, int year, int wheelSize, double engineCapacity) {
         this.color = color;
@@ -50,6 +54,10 @@ public class Car {
 
     public ArrayList<String> getOptionList() {
         return optionList;
+    }
+
+    public void setOptionList(ArrayList<String> optionList) {
+        this.optionList = optionList;
     }
 
     public void infoCar() {
