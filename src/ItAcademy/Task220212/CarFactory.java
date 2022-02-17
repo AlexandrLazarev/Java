@@ -12,9 +12,12 @@ public class CarFactory extends Car implements CarService {
     double[] arrayEngine = {1.8, 2.0, 2.2};
     String[] arrayColor = {"BLACK", "RED", "WHITE"};
     int[] arrayWheelSize = {18, 20, 22};
+
+    Car BMW =new Car("BLACK", "BMW", 2020, 20, 2.0);
+    Car AUDI = new Car("RED", "AUDI", 2022, 22, 2.2);
+
     ArrayList<Car> carWarehouse = new ArrayList<>();
-    Car[] accumulation = {new Car("BLACK", "BMW", 2020, 20, 2.0),
-            new Car("RED", "AUDI", 2022, 22, 2.2)};
+    
 
     void infoCarFactory() {
         System.out.println("Возможные модели " + Arrays.toString(arrayModel));
@@ -31,7 +34,7 @@ public class CarFactory extends Car implements CarService {
 
     }
 
-    public void setOptionList() {
+    public void setOptionList(String s) {
 
     }
 }
