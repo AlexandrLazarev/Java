@@ -1,71 +1,77 @@
 package ItAcademy.Task220212;
 
-import java.util.ArrayList;
-
+import java.util.HashSet;
+import java.util.Set;
 
 public class Car {
-    private String color;
-    private String model;
-    private int year;
-    private int wheelSize;
-    private double engineCapacity;
-    ArrayList<String> optionList = new ArrayList<>();
+    private ColorEnum color;
+    private final ModelEnum model;
+    private final int year;
+    private WheelSizeEnum wheelSize;
+    private final EngineVolEnum engineVol;
+    private Set<OptionEnum> options;
 
-    Car() {
-
-    }
-
-    Car(String color, String model, int year, int wheelSize, double engineCapacity) {
+    public Car(ColorEnum color,
+               ModelEnum model,
+               int year,
+               WheelSizeEnum wheelSize,
+               EngineVolEnum engineVol,
+               Set<OptionEnum> options) {
         this.color = color;
         this.model = model;
         this.year = year;
         this.wheelSize = wheelSize;
-        this.engineCapacity = engineCapacity;
-
+        this.engineVol = engineVol;
+        this.options = options;
+        if (options == null){
+            this.options = new HashSet<>();
+        } else  {
+            this.options = options;
+        }
     }
 
-    public String getColor() {
-        return color;
+    public Car(ColorEnum color,
+               ModelEnum model,
+               int year,
+               WheelSizeEnum wheelSize,
+               EngineVolEnum engineVol) {
+        this.color = color;
+        this.model = model;
+        this.year = year;
+        this.wheelSize = wheelSize;
+        this.engineVol = engineVol;
+        this.options = new HashSet<>();
     }
 
-    public void setColor(String color) {
+    public void setColor(ColorEnum color) {
         this.color = color;
     }
 
-    public int getWheelSize() {
-        return wheelSize;
-    }
-
-    public void setWheelSize(int wheelSize) {
+    public void setWheelSize(WheelSizeEnum wheelSize) {
         this.wheelSize = wheelSize;
     }
 
-    public double getEngineCapacity() {
-        return engineCapacity;
+    public void setOptions(Set<OptionEnum> options) {
+        this.options = options;
     }
 
-    public String getModel() {
-        return model;
+    public void addOption(OptionEnum option) {
+        this.options.add(option);
     }
 
-    public int getYear() {
-        return year;
+    public void deleteOption(OptionEnum option) {
+        this.options.remove(option);
     }
 
-    public ArrayList<String> getOptionList() {
-        return optionList;
-    }
-
-    public void setOptionList(ArrayList<String> optionList) {
-        this.optionList = optionList;
-    }
-
-    public void infoCar() {
-        System.out.println("Модель - " + model + "\nГод выпуска - " + year +
-                "\nЦвет - " + color + "\nОбъем двигателя - " + engineCapacity +
-                "\nРазмер колес - " + wheelSize + "'" + "\nОпции: " + optionList);
+    @Override
+    public String toString() {
+        return "Car{" +
+                "color=" + color +
+                ", model=" + model +
+                ", year=" + year +
+                ", wheelSize=" + wheelSize +
+                ", engineVol=" + engineVol +
+                ", options=" + options +
+                '}';
     }
 }
-
-
-
